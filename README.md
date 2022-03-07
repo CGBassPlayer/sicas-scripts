@@ -11,17 +11,17 @@ Repo containing scripts and tools for development at the SICAS Center.
 # Installation
 
 ### `audit`
-To install this script, download it and but it in your bin directory
+To install this script, download it and but it in your local bin directory
 ```bash
 wget https://raw.githubusercontent.com/CGBassPlayer/sicas-scripts/master/audit.sh
 mkdir -p ~/bin
-cp audit.sh ~/bin/audit
+mv audit.sh ~/bin/audit
 chmod u+x ~/bin/audit
 ```
 
 To install for all users on the system, install in the `/usr/bin/` directory
 ```bash
 wget https://raw.githubusercontent.com/CGBassPlayer/sicas-scripts/master/audit.sh
-sudo cp audit.sh /usr/bin/audit
+sudo mv audit.sh /usr/bin/audit
 sudo chmod +x /usr/bin/audit
 ```
