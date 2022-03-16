@@ -6,11 +6,10 @@ Repo containing scripts and tools for development at the SICAS Center.
 
 | Script |  | Description | 
 | --- | --- | --- |
-| [audit](https://github.com/CGBassPlayer/sicas-scripts/blob/master/audit.sh) | [Install](#audit) | Allows developers to look at the audit trail of a jar file file without needing to extract it |
+| [audit](https://github.com/CGBassPlayer/sicas-scripts/blob/master/audit.sh) | [Usage & Install](#audit) | Allows developers to look at the audit trail of a jar file file without needing to extract it |
+---
 
-# Installation
-
-### `audit`
+## `audit`
 #### Installation
 To install this script, download it and but it in your local bin directory
 ```bash
