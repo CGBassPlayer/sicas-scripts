@@ -4,8 +4,6 @@ function check_preq () {
     sudo apt install whiptail"; exit 1; }
     command -v dos2unix >/dev/null 2>&1 || { whiptail --title "Missing Dependancy" --msgbox "This script requires dos2unix to be installed on your system. 
     sudo apt install dos2unix" 8 70; exit 1; }
-    command -v wget >/dev/null 2>&1 || { whiptail --title "Missing Dependancy" --msgbox "This script requires wget to be installed on your system. 
-    sudo apt install wget" 8 70; exit 1; }
 }
 
 function install_script () {
