@@ -9,8 +9,17 @@ Repo containing scripts and tools for development at the SICAS Center.
 | [audit](https://github.com/CGBassPlayer/sicas-scripts/blob/master/audit.sh) | [Usage & Install](#audit) | Allows developers to look at the audit trail of a jar file file without needing to extract it |
 ---
 
+## Installation
+`installer.sh` is a script that can automatically install any selection of avaiable scripts onto your system. This script requires checks for [whiptail](https://linux.die.net/man/1/whiptail) and [dos2unix](https://linux.die.net/man/1/dos2unix) to be installed before prompting the scripts install.
+```bash
+# Install pre-reqs
+sudo apt install whiptail dos2unix wget
+
+wget https://raw.githubusercontent.com/CGBassPlayer/sicas-scripts/master/installer.sh -O - | bash
+```
+
 ## `audit`
-#### Installation
+#### Manual Installation
 To install this script, download it and but it in your local bin directory
 ```bash
 wget https://raw.githubusercontent.com/CGBassPlayer/sicas-scripts/master/audit.sh
