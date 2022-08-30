@@ -7,7 +7,7 @@ Repo containing scripts and tools for development at the SICAS Center.
 | Script |  | Description |
 | --- | --- | --- |
 | [audit](https://github.com/CGBassPlayer/sicas-scripts/blob/master/audit.sh) | [Usage & Install](#audit) | Allows developers to look at the audit trail of a jar file file without needing to extract it |
-| [ff_dup_id](https://github.com/CGBassPlayer/sicas-scripts/blob/master/ff_dup_id.py) | [Usage & Install](#ff_dup_id) | Check flat file recieved from SUNYHR |
+| [ff_dup_id](https://github.com/CGBassPlayer/sicas-scripts/blob/master/ff_dup_id.py) | [Usage & Install](#ff_dup_id) | Check flat file recieved from SUNYHR for duplicate Global IDs |
 ---
 
 ## Installation
