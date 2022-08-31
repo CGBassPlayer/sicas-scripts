@@ -83,5 +83,5 @@ chmod u+x ~/bin/ff_dup_id
 #### Usage
 
 ```
-Usage: ff_dup_id {file}
+ff_dup_id {file}
 ```

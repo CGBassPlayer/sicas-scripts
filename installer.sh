@@ -7,7 +7,7 @@ function check_preq () {
 }
 
 function install_script () {
-    wget "https://raw.githubusercontent.com/CGBassPlayer/sicas-scripts/master/$1"
+    wget "https://raw.githubusercontent.com/CGBassPlayer/sicas-scripts/master/scripts/$1"
     mkdir -p ~/bin
     mv -u -S .old $1 ~/bin/$1%.*
     chmod u+x ~/bin/$1
@@ -16,9 +16,10 @@ function install_script () {
 }
 
 check_preq
-SCRIPTS=$(whiptail --title "SICAS Developer scripts Available" --checklist "Choose scripts to install"  20 78 4 \
+SCRIPTS=$(whiptail --title "SICAS Developer scripts Available" --checklist "Choose scripts to install"  20 90 4 \
 audit.sh "Manipulate files in a jar file" OFF \
-ff_dup_id.py "Check for dupilcate Global IDs in flat file form SUNYHR" OFF 3>&1 1>&2 2>&3)
+ff_dup_id.py "Check for dupilcate Global IDs in flat file from SUNYHR" OFF \
+3>&1 1>&2 2>&3)
 
 for SCRIPT in $SCRIPTS; do
     SCRIPT=`sed -e 's/^"//' -e 's/"$//' <<<"$SCRIPT"` # Strip double quotes from variable
