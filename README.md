@@ -103,7 +103,7 @@ chmod u+x ~/bin/mkextension
 To install for all users on the system, install in the `/usr/bin/` directory
 
 ```bash
-wget https://raw.githubusercontent.com/CGBassPlayer/sicas-scripts/master/scripts/mkextension.py
+wget https://raw.githubusercontent.com/CGBassPlayer/sicas-scripts/master/scripts/mkextension.sh
 mv mkextension.py ~/bin/mkextension
 chmod u+x ~/bin/mkextension
 ```
