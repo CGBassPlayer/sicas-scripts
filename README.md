@@ -111,5 +111,5 @@ chmod u+x ~/bin/mkextension
 #### Usage
 
 ```text
-mkextension {file}
+mkextension {extension name}
 ```
