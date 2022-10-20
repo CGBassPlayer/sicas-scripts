@@ -6,8 +6,9 @@ Repo containing scripts and tools for development at the SICAS Center.
 
 | Script |  | Description |
 | --- | --- | --- |
-| [audit](https://github.com/CGBassPlayer/sicas-scripts/blob/master/audit.sh) | [Usage & Install](#audit) | Allows developers to look at the audit trail of a jar file file without needing to extract it |
-| [ff_dup_id](https://github.com/CGBassPlayer/sicas-scripts/blob/master/ff_dup_id.py) | [Usage & Install](#ff_dup_id) | Check flat file recieved from SUNYHR for duplicate Global IDs |
+| [audit](https://github.com/CGBassPlayer/sicas-scripts/blob/master/scripts/audit.sh) | [Usage & Install](#audit) | Allows developers to look at the audit trail of a jar file file without needing to extract it |
+| [ff_dup_id](https://github.com/CGBassPlayer/sicas-scripts/blob/master/scripts/ff_dup_id.py) | [Usage & Install](#ff_dup_id) | Check flat file recieved from SUNYHR for duplicate Global IDs |
+| [mkextension](https://github.com/CGBassPlayer/sicas-scripts/blob/master/scripts/mkextension.sh) | [Usage & Install](#mkextension) | Create base extension template for Ellucian Expirence |
 ---
 
 ## Installation
@@ -23,12 +24,12 @@ wget https://raw.githubusercontent.com/CGBassPlayer/sicas-scripts/master/install
 
 ## `audit`
 
-#### Manual Installation
+### Manual Installation
 
 To install this script, download it and but it in your local bin directory
 
 ```bash
-wget https://raw.githubusercontent.com/CGBassPlayer/sicas-scripts/master/audit.sh
+wget https://raw.githubusercontent.com/CGBassPlayer/sicas-scripts/master/scripts/audit.sh
 mkdir -p ~/bin
 mv audit.sh ~/bin/audit
 chmod u+x ~/bin/audit
@@ -37,14 +38,14 @@ chmod u+x ~/bin/audit
 To install for all users on the system, install in the `/usr/bin/` directory
 
 ```bash
-wget https://raw.githubusercontent.com/CGBassPlayer/sicas-scripts/master/audit.sh
+wget https://raw.githubusercontent.com/CGBassPlayer/sicas-scripts/master/scripts/audit.sh
 sudo mv audit.sh /usr/bin/audit
 sudo chmod +x /usr/bin/audit
 ```
 
-#### Usage
+### Usage
 
-```
+```text
 Usage: audit -j {file} [options]
     -h  --help          Display this help prompt
     -V  --version       Display version
@@ -61,12 +62,12 @@ Usage: audit -j {file} [options]
 
 ## `ff_dup_id`
 
-#### Manual Installation
+### Manual Installation
 
 To install this script, download it and but it in your local bin directory
 
 ```bash
-wget https://raw.githubusercontent.com/CGBassPlayer/sicas-scripts/master/ff_dup_id.py
+wget https://raw.githubusercontent.com/CGBassPlayer/sicas-scripts/master/scripts/ff_dup_id.py
 mkdir -p ~/bin
 mv ff_dup_id.py ~/bin/ff_dup_id
 chmod u+x ~/bin/ff_dup_id
@@ -75,13 +76,40 @@ chmod u+x ~/bin/ff_dup_id
 To install for all users on the system, install in the `/usr/bin/` directory
 
 ```bash
-wget https://raw.githubusercontent.com/CGBassPlayer/sicas-scripts/master/ff_dup_id.py
+wget https://raw.githubusercontent.com/CGBassPlayer/sicas-scripts/master/scripts/ff_dup_id.py
 mv ff_dup_id.py ~/bin/ff_dup_id
 chmod u+x ~/bin/ff_dup_id
 ```
 
 #### Usage
 
-```
+```text
 ff_dup_id {file}
+```
+
+## `mkextension`
+
+### Manual Installation
+
+To install this script, download it and but it in your local bin directory
+
+```bash
+wget https://raw.githubusercontent.com/CGBassPlayer/sicas-scripts/master/scripts/mkextension.sh
+mkdir -p ~/bin
+mv mkextension.sh ~/bin/mkextension
+chmod u+x ~/bin/mkextension
+```
+
+To install for all users on the system, install in the `/usr/bin/` directory
+
+```bash
+wget https://raw.githubusercontent.com/CGBassPlayer/sicas-scripts/master/scripts/mkextension.py
+mv mkextension.py ~/bin/mkextension
+chmod u+x ~/bin/mkextension
+```
+
+#### Usage
+
+```text
+mkextension {file}
 ```
