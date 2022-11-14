@@ -1,0 +1,12 @@
+name: Lint
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  lint:
+    name: Lint Scripts
+    uses: CGBassPlayer/sicas-workflows/.github/workflows/lint.yml@stable
+    with:
+      default_branch: master
