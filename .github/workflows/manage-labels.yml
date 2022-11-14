@@ -1,0 +1,14 @@
+name: Manage labels
+
+on:
+  push:
+    paths:
+      - ".github/*"
+
+jobs:
+  manage-labels:
+    name: Update Labels
+    uses: CGBassPlayer/sicas-workflows/.github/workflows/manage-labels.yml
+    with:
+      labels_file: labels.yml
+      delete_missing: true
