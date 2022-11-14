@@ -1,0 +1,23 @@
+name: Script Issue
+description: Issue with any of the scripts
+labels:
+  - bug
+  - script
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ### This issue template is for problems found in scripts
+
+  - type: input
+    id: script_name
+    attributes:
+      label: Script Name
+      description: Name of the script
+
+  - type: textarea
+    attributes:
+      label: Descripton
+      description: Please describe the issue we are having
+
