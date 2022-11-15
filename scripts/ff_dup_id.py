@@ -4,7 +4,7 @@ import sys
 
 def main(id_file):
     ids = {}
-    with open(id_file, 'r') as f:
+    with open(id_file, "r") as f:
         for line in f:
             suny_id = [line[5:15].strip("0")]
             banner_id = line[33:45].strip("0")

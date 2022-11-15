@@ -18,11 +18,11 @@ function check_preq () {
 function install_script () {
     wget "https://raw.githubusercontent.com/CGBassPlayer/sicas-scripts/master/scripts/$1"
     mkdir -p ~/bin
-    CMD=`echo $1 | cut -f1 -d"."` # Strip off file extension
-    mv -u -S .old $1 ~/bin/${CMD}
-    chmod -x ~/bin/$CMD.old
-    chmod u+x ~/bin/${CMD}
-    dos2unix -q ~/bin/${CMD}
+    CMD=$(echo $1 | cut -f1 -d".") # Strip off file extension
+    mv -u -S .old "$1" ~/bin/"${CMD}"
+    chmod -x ~/bin/"${CMD}".old
+    chmod u+x ~/bin/"${CMD}"
+    dos2unix -q ~/bin/"${CMD}"
     echo -e "${GREEN}Successfully installed ${CMD}${NO_COLOR}"
 }
 
@@ -34,9 +34,9 @@ mkextension.sh "Create extension template for Ellucian Expirience" OFF \
 3>&1 1>&2 2>&3)
 
 for SCRIPT in $SCRIPTS; do
-    SCRIPT=`sed -e 's/^"//' -e 's/"$//' <<<"$SCRIPT"` # Strip double quotes from variable
+    SCRIPT=$(sed -e 's/^"//' -e 's/"$//' <<<"$SCRIPT") # Strip double quotes from variable
     echo -e "${BLUE}Installing $SCRIPT...{$NO_COLOR}"
-    install_script $SCRIPT
+    install_script "${SCRIPT}"
 done
 
 exit 0

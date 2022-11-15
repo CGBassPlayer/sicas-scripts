@@ -26,7 +26,7 @@ wget https://raw.githubusercontent.com/CGBassPlayer/sicas-scripts/master/install
 
 ## `audit`
 
-### Manual Installation
+### `audit` Manual Installation
 
 To install this script, download it and but it in your local bin directory
 
@@ -45,7 +45,7 @@ sudo mv audit.sh /usr/bin/audit
 sudo chmod +x /usr/bin/audit
 ```
 
-### Usage
+### `audit` Usage
 
 ```text
 Usage: audit -j {file} [options]
@@ -64,7 +64,7 @@ Usage: audit -j {file} [options]
 
 ## `ff_dup_id`
 
-### Manual Installation
+### `ff_dup_id` Manual Installation
 
 To install this script, download it and but it in your local bin directory
 
@@ -83,7 +83,7 @@ mv ff_dup_id.py ~/bin/ff_dup_id
 chmod u+x ~/bin/ff_dup_id
 ```
 
-#### Usage
+### `ff_dup_id` Usage
 
 ```text
 ff_dup_id {file}
@@ -91,7 +91,7 @@ ff_dup_id {file}
 
 ## `mkextension`
 
-### Manual Installation
+### `mkextension` Manual Installation
 
 To install this script, download it and but it in your local bin directory
 
@@ -110,7 +110,7 @@ mv mkextension.py ~/bin/mkextension
 chmod u+x ~/bin/mkextension
 ```
 
-#### Usage
+#### `mkextension` Usage
 
 ```text
 mkextension {extension name}

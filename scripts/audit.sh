@@ -134,59 +134,59 @@ touch $LOCK_FILE
 
 function log () {
   if [[ "$USE_LOGGING" == true ]]; then
-    echo "[debug] $@"
+    echo "[debug] $*"
   fi
 }
 
 # ------------------------------------------------------------------------------
 # Script Logic
 
-if [[ "$JAR_FILE" == "" ]]; then
+if [[ "${JAR_FILE}" == "" ]]; then
   echo "jar file was not specified. Please make sure to use -j in your command."
   echo "$USAGE"
   exit 1
 fi
 
 if [[ "$LIST_FILES" == true ]]; then
-  unzip -l $JAR_FILE | grep -v $IGNORED_FILES
+unzip -l "${JAR_FILE}" | grep -v $IGNORED_FILES
   exit 0
 fi
 
 if [[ "$EDIT_FILE" != "" ]]; then
   log "Editing file $EDIT_FILE"
   # Create temp working directory
-  TEMP_DIR=$(mktemp -d "${TMPDIR:-/tmp/}$(basename $0).XXXXXX")
+  TEMP_DIR=$(mktemp -d "${TMPDIR:-/tmp/}$(basename "$0").XXXXXX")
   WORKING_FILE="${TEMP_DIR}/${EDIT_FILE##*/}"
-  log "Created temp directory $TMP_DIR"
+  log "Created temp directory $TEMP_DIR"
 
   # Copy file to temp working directory and open
-  unzip -j $JAR_FILE $EDIT_FILE -d $TEMP_DIR/
-  cp $WORKING_FILE $TEMP_DIR/${EDIT_FILE##*/}.cp
-  nano $WORKING_FILE
+  unzip -j "${JAR_FILE}" "${EDIT_FILE}" -d "${TEMP_DIR}"/
+  cp "${WORKING_FILE}" "${TEMP_DIR}"/"${EDIT_FILE##*/}".cp
+  nano "${WORKING_FILE}"
 
   # Exit if the file did not change
-  if diff -s $WORKING_FILE $WORKING_FILE.cp; then
+  if diff -s "${WORKING_FILE}" "${WORKING_FILE}".cp; then
     log "No changes were made to the file"
-    rm -r $TEMP_DIR
+    rm -r "${TEMP_DIR}"
     exit 0
   fi
 
   # Update jar file
   log "Updating the jar file and removing temp directory"
-  cp $WORKING_FILE .
-  zip -u $JAR_FILE ${EDIT_FILE##*/}
-  rm ${EDIT_FILE##*/}
-  rm -r $TEMP_DIR
+  cp "${WORKING_FILE}" .
+  zip -u "${JAR_FILE}" "${EDIT_FILE##*/}"
+  rm "${EDIT_FILE##*/}"
+  rm -r "${TEMP_DIR}"
   exit 0
 fi
 
-if [[ "$DELETE_FILE" != "" ]]; then
-  log "Deleteing file $DELETE_FILE"
-  zip -d $JAR_FILE $DELETE_FILE
+if [[ "${DELETE_FILE}" != "" ]]; then
+  log "Deleteing file ${DELETE_FILE}"
+  zip -d "${JAR_FILE}" "${DELETE_FILE}"
   exit 0
 fi
 
-if [[ "$JAR_FILE" != "" ]]; then
-  unzip -p $JAR_FILE $AUDIT_FILE
+if [[ "${JAR_FILE}" != "" ]]; then
+  unzip -p "${JAR_FILE}" $AUDIT_FILE
   exit 0
 fi
