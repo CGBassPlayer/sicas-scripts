@@ -5,7 +5,7 @@ NO_COLOR='\033[0m'       # Text Reset
 
 RED='\033[0;31m'          # Red
 GREEN='\033[0;32m'        # Green
-YELLOW='\033[0;33m'       # Yellow
+# YELLOW='\033[0;33m'       # Yellow
 BLUE='\033[0;34m'         # Blue
 
 function check_preq () {
@@ -18,7 +18,7 @@ function check_preq () {
 function install_script () {
     wget "https://raw.githubusercontent.com/CGBassPlayer/sicas-scripts/master/scripts/$1"
     mkdir -p ~/bin
-    CMD=$(echo $1 | cut -f1 -d".") # Strip off file extension
+    CMD=$(echo "$1" | cut -f1 -d".") # Strip off file extension
     mv -u -S .old "$1" ~/bin/"${CMD}"
     chmod -x ~/bin/"${CMD}".old
     chmod u+x ~/bin/"${CMD}"
