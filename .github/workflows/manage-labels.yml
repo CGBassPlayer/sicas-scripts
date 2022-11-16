@@ -10,7 +10,7 @@ on:
 jobs:
   manage-labels:
     name: Update Labels
-    uses: CGBassPlayer/sicas-workflows/.github/workflows/manage-labels.yml@stable
+    uses: CGBassPlayer/sicas-workflows/.github/workflows/manage-labels.yml@main
     with:
       labels_file: .github/labels.yml
       delete_missing: true

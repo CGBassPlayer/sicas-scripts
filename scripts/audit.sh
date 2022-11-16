@@ -1,5 +1,5 @@
 #!/bin/bash
-<< ABOUT
+: << ABOUT
 Name:   audit
 Author: Ryan Goodwin
 
@@ -7,7 +7,7 @@ View and edit audit trail of a jar file or edit any file within a jar without
   extracting it.
 ABOUT
 
-<< CHANGE_LOG
+: << CHANGE_LOG
 --------------------------------------------------------------------------------
 Version 0.3.0
   1. Add flag to delete file inside of jar file
@@ -126,8 +126,8 @@ echo "Script is already running"
 exit
 fi
 
-trap "rm -f $LOCK_FILE" EXIT
-touch $LOCK_FILE
+trap 'rm -f "${LOCK_FILE}"' EXIT
+touch "${LOCK_FILE}"
 
 # ------------------------------------------------------------------------------
 # Logging
@@ -187,6 +187,6 @@ if [[ "${DELETE_FILE}" != "" ]]; then
 fi
 
 if [[ "${JAR_FILE}" != "" ]]; then
-  unzip -p "${JAR_FILE}" $AUDIT_FILE
+unzip -p "${JAR_FILE}" "${AUDIT_FILE}"
   exit 0
 fi
