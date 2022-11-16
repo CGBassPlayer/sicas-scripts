@@ -2,7 +2,7 @@
 
 [![Lint Status](https://github.com/CGBassPlayer/sicas-scripts/actions/workflows/lint.yml/badge.svg)](https://github.com/CGBassPlayer/sicas-scripts/actions/workflows/lint.yml)
 
-Repo containing scripts and tools for development at the SICAS Center.
+Repository containing scripts and tools for development at the SICAS Center.
 
 ## Current scripts
 
