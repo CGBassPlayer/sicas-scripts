@@ -12,5 +12,5 @@ jobs:
     name: Update Labels
     uses: CGBassPlayer/sicas-workflows/.github/workflows/manage-labels.yml@stable
     with:
-      labels_file: labels.yml
+      labels_file: .github/labels.yml
       delete_missing: true
