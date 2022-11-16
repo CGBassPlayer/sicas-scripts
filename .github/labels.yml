@@ -1,16 +1,32 @@
 ---
 - name: "bug :bug:"
-  color: DA4400
-  description: "Something isn't working"
+  color: "DA4400"
+  description: Something isn't working
 
 - name: "critical :ambulance:"
-  color: FF0000
-  description: "Something is broken and needs immidiate attention"
+  color: "FF0000"
+  description: Something is broken and needs immidiate attention
+
+- name: "enhancement :sparkles:"
+  color: "34dee4"
+  description: This issue will not be worked on
+
+- name: "wontfix :no_entry:"
+  color: "333333"
+  description: This will not be worked on
+
+- name: "duplicate :busts_in_silhouette:"
+  color: "333333"
+  description: Something like this already exists
+
+- name: "documentation :page_with_curl:"
+  color: "0091FF"
+  description: Related to any documentation
 
 - name: script
-  color: 2170FF
-  description: "Related to a script"
+  color: "2170FF"
+  description: Related to a script
 
 - name: installer
-  color: 000EFF
-  description: "Related to the installer script"
+  color: "000EFF"
+  description: Related to the installer script
