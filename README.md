@@ -1,5 +1,9 @@
 # SICAS Scripts
 
+## ***NOTE***
+
+I no longer work at SICAS so this repo is archived
+
 [![Lint Status](https://github.com/CGBassPlayer/sicas-scripts/actions/workflows/lint.yml/badge.svg)](https://github.com/CGBassPlayer/sicas-scripts/actions/workflows/lint.yml)
 
 Repository containing scripts and tools for development at the SICAS Center.
